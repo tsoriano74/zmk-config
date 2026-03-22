@@ -1,0 +1,44 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            display-name = "Base";
+            bindings = <
+                /* Main gauche */
+                &kp Q      &kp W      &kp E      &kp R      &kp T
+                &kp Z      &kp A      &kp S      &kp D      &kp F
+                &kp G      &kp H      &kp Y      &kp X      &kp C
+                &kp V      &kp B      &kp LSHIFT &kp LALT   &mo 1
+                &none      &none      &none      &none      &none
+
+                /* Main droite */
+                &kp U      &kp I      &kp O      &kp P      &none
+                &none      &kp J      &kp K      &kp L      &kp M
+                &none      &none      &kp COMMA  &kp DOT    &none
+                &kp SQT    &kp DQT    &kp MINUS  &kp SPACE  &kp ENTER
+                &kp LCTRL  &none      &none      &none      &none
+            >;
+        };
+
+        layer_1 {
+            display-name = "Fn";
+            bindings = <
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans
+            >;
+        };
+    };
+};
